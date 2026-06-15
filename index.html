@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empresa Constructora | Construyendo el Futuro</title>
+    <meta name="description" content="Más de 20 años de experiencia transformando visiones en realidades estructurales. Calidad garantizada en proyectos residenciales, comerciales e industriales." />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="antialiased overflow-x-hidden text-text bg-background">
+    
+    <!-- Sticky Navigation Bar -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 py-4 glass-panel">
+      <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+        <!-- Logo Placeholder -->
+        <a href="#inicio" class="flex items-center gap-2">
+          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/></svg>
+          <span class="font-headings font-bold text-xl text-primary tracking-tight">Constructora</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#inicio" id="nav-home" class="text-sm font-semibold text-text hover:text-secondary transition-colors">Inicio</a>
+          <a href="#nosotros" id="nav-about" class="text-sm font-semibold text-text hover:text-secondary transition-colors">Nosotros</a>
+          <a href="#servicios" id="nav-services" class="text-sm font-semibold text-text hover:text-secondary transition-colors">Servicios</a>
+          <a href="#proyectos" id="nav-projects" class="text-sm font-semibold text-text hover:text-secondary transition-colors">Proyectos</a>
+          <a href="#contacto" id="nav-contact" class="text-sm font-semibold text-text hover:text-secondary transition-colors">Contacto</a>
+          <button onclick="document.getElementById('contacto').scrollIntoView()" class="bg-primary hover:bg-blue-900 text-white font-semibold py-2 px-6 rounded-full transition-colors shadow-md">
+            Cotiza tu Proyecto
+          </button>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 flex-col py-4 px-6 gap-4">
+        <a href="#inicio" class="mobile-link text-text font-semibold hover:text-secondary">Inicio</a>
+        <a href="#nosotros" class="mobile-link text-text font-semibold hover:text-secondary">Nosotros</a>
+        <a href="#servicios" class="mobile-link text-text font-semibold hover:text-secondary">Servicios</a>
+        <a href="#proyectos" class="mobile-link text-text font-semibold hover:text-secondary">Proyectos</a>
+        <a href="#contacto" class="mobile-link text-text font-semibold hover:text-secondary">Contacto</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&q=80&w=2000" alt="Construcción" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-primary/70 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/90"></div>
+      </div>
+      
+      <div class="relative z-10 container mx-auto px-4 md:px-6 text-center text-white">
+        <h1 class="text-4xl md:text-6xl font-bold font-headings mb-6 leading-tight drop-shadow-lg">
+          Construyendo el Futuro con <br class="hidden md:block"/> Excelencia y Solidez
+        </h1>
+        <p class="text-lg md:text-xl font-body max-w-3xl mx-auto mb-10 text-gray-200">
+          Más de 20 años de experiencia transformando visiones en realidades estructurales. Calidad garantizada en proyectos residenciales, comerciales e industriales.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <button onclick="document.getElementById('proyectos').scrollIntoView()" class="w-full sm:w-auto bg-secondary hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full transition-all hover-lift shadow-lg text-center cursor-pointer">
+            Ver Nuestros Proyectos
+          </button>
+          <button onclick="document.getElementById('contacto').scrollIntoView()" class="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-semibold py-3 px-8 rounded-full transition-all text-center cursor-pointer">
+            Hablemos de tu Obra
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-24 bg-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div class="lg:w-1/2">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356f58?auto=format&fit=crop&q=80&w=1000" alt="Sobre Nosotros" class="rounded-2xl shadow-2xl object-cover w-full h-[500px]" />
+              <div class="absolute -bottom-8 -right-8 bg-secondary text-white p-8 rounded-xl shadow-xl hidden md:block">
+                <span class="block text-4xl font-bold mb-2">20+</span>
+                <span class="block text-sm font-semibold uppercase tracking-wider">Años de <br/>Experiencia</span>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary font-headings mb-6 relative inline-block">
+              Sobre Nosotros
+              <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-secondary rounded-full"></span>
+            </h2>
+            <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+              Somos una empresa constructora líder, comprometida con la innovación, la seguridad y la puntualidad en cada entrega.
+            </p>
+            <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+              Nuestro equipo de ingenieros, arquitectos y operarios altamente capacitados trabaja con los más altos estándares de la industria para asegurar que cada estructura perdure por generaciones.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="font-semibold text-text">Seguridad Estructural</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="font-semibold text-text">Transparencia Total</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="font-semibold text-text">Compromiso Medioambiental</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                </div>
+                <span class="font-semibold text-text">Innovación Tecnológica</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-24 bg-background">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary font-headings mb-4">Nuestros Servicios</h2>
+          <p class="text-gray-600 text-lg">Ofrecemos soluciones integrales para cubrir todas las necesidades de su proyecto constructivo.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Service Card 1 -->
+          <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift border border-gray-100 transition-all">
+            <div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-secondary mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-3">Edificación Residencial</h3>
+            <p class="text-gray-600">Diseño y construcción de casas y edificios habitacionales a la medida.</p>
+          </div>
+          
+          <!-- Service Card 2 -->
+          <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift border border-gray-100 transition-all">
+            <div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-secondary mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-3">Obras Comerciales</h3>
+            <p class="text-gray-600">Desarrollo de locales, oficinas y centros comerciales modernos y funcionales.</p>
+          </div>
+          
+          <!-- Service Card 3 -->
+          <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift border border-gray-100 transition-all">
+            <div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-secondary mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-3">Proyectos Industriales</h3>
+            <p class="text-gray-600">Naves industriales y galpones diseñados para optimizar la logística y producción.</p>
+          </div>
+          
+          <!-- Service Card 4 -->
+          <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift border border-gray-100 transition-all">
+            <div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-secondary mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-3">Gestión de Proyectos</h3>
+            <p class="text-gray-600">Asesoría integral, tramitación de permisos y supervisión técnica de obras.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="proyectos" class="py-24 bg-white">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary font-headings mb-4">Proyectos Destacados</h2>
+            <p class="text-gray-600 text-lg max-w-2xl">Un vistazo a nuestras obras más representativas que demuestran nuestra capacidad técnica y atención al detalle.</p>
+          </div>
+          <!-- Filters -->
+          <div class="flex flex-wrap gap-2">
+            <button class="filter-btn active px-6 py-2 rounded-full bg-primary text-white font-semibold text-sm transition-colors" data-filter="all">Todos</button>
+            <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-text hover:bg-gray-200 font-semibold text-sm transition-colors" data-filter="residencial">Residencial</button>
+            <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-text hover:bg-gray-200 font-semibold text-sm transition-colors" data-filter="comercial">Comercial</button>
+            <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-text hover:bg-gray-200 font-semibold text-sm transition-colors" data-filter="industrial">Industrial</button>
+          </div>
+        </div>
+        
+        <!-- Masonry Grid Placeholder -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+          <!-- Item 1 -->
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="residencial">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" alt="Proyecto Residencial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Residencial</span>
+              <h3 class="text-white text-xl font-bold">Condominio Las Brisas</h3>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="comercial">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Proyecto Comercial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Comercial</span>
+              <h3 class="text-white text-xl font-bold">Centro Empresarial Nova</h3>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="industrial">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Proyecto Industrial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Industrial</span>
+              <h3 class="text-white text-xl font-bold">Planta Logística Sur</h3>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="residencial">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" alt="Proyecto Residencial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Residencial</span>
+              <h3 class="text-white text-xl font-bold">Edificio Vista Mar</h3>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="comercial">
+            <img src="https://images.unsplash.com/photo-1556804367-18451d453676?auto=format&fit=crop&q=80&w=800" alt="Proyecto Comercial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Comercial</span>
+              <h3 class="text-white text-xl font-bold">Plaza Centro Mall</h3>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="industrial">
+            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=800" alt="Proyecto Industrial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Industrial</span>
+              <h3 class="text-white text-xl font-bold">Galpón Manufactura Alfa</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <button class="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-colors cursor-pointer">
+            Cargar Más Proyectos
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 bg-background">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden shadow-2xl">
+          <!-- Contact Form -->
+          <div class="lg:w-1/2 p-10 md:p-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary font-headings mb-2">Contáctanos</h2>
+            <p class="text-gray-600 mb-8">Cuéntenos sobre su próximo proyecto y un especialista se pondrá en contacto a la brevedad.</p>
+            
+            <form id="contact-form" class="space-y-6" novalidate>
+              <div>
+                <input type="text" id="full_name" placeholder="Nombre Completo" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-white transition-all" />
+                <span class="error-msg text-red-500 text-sm mt-1 hidden">Este campo es requerido.</span>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <input type="email" id="email_address" placeholder="Correo Electrónico" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-white transition-all" />
+                  <span class="error-msg text-red-500 text-sm mt-1 hidden">Ingrese un correo válido.</span>
+                </div>
+                <div>
+                  <input type="tel" id="phone_number" placeholder="Teléfono" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-white transition-all" />
+                </div>
+              </div>
+              
+              <div>
+                <select id="project_type" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-white transition-all appearance-none text-gray-500">
+                  <option value="" disabled selected>Tipo de Proyecto</option>
+                  <option value="Residencial">Residencial</option>
+                  <option value="Comercial">Comercial</option>
+                  <option value="Industrial">Industrial</option>
+                  <option value="Otro">Otro</option>
+                </select>
+                <span class="error-msg text-red-500 text-sm mt-1 hidden">Seleccione un tipo de proyecto.</span>
+              </div>
+              
+              <div>
+                <textarea id="message" rows="4" placeholder="Cuéntanos sobre tu proyecto..." required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-white transition-all resize-none"></textarea>
+                <span class="error-msg text-red-500 text-sm mt-1 hidden">Este campo es requerido.</span>
+              </div>
+              
+              <button type="submit" class="w-full bg-primary hover:bg-blue-900 text-white font-semibold py-4 rounded-lg transition-colors shadow-md text-lg">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+          
+          <!-- Company Info & Map Placeholder -->
+          <div class="lg:w-1/2 bg-primary text-white p-10 md:p-16 relative overflow-hidden flex flex-col justify-between">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-secondary opacity-20 rounded-full blur-3xl"></div>
+            
+            <div class="relative z-10">
+              <h3 class="text-2xl font-bold font-headings mb-8">Información de Contacto</h3>
+              
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                  </div>
+                  <div>
+                    <span class="block text-sm text-gray-300 mb-1">Dirección:</span>
+                    <span class="font-semibold text-lg">Av. Principal 123, Ciudad, Región</span>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                  </div>
+                  <div>
+                    <span class="block text-sm text-gray-300 mb-1">Teléfono:</span>
+                    <span class="font-semibold text-lg">+56 9 1234 5678</span>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  </div>
+                  <div>
+                    <span class="block text-sm text-gray-300 mb-1">Email:</span>
+                    <span class="font-semibold text-lg">contacto@empresaconstructora.cl</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="relative z-10 mt-12 bg-white/10 p-6 rounded-xl">
+              <h4 class="font-semibold mb-4">Horario de Atención</h4>
+              <ul class="space-y-2 text-gray-300">
+                <li class="flex justify-between"><span>Lunes - Viernes:</span> <span>08:00 - 18:00</span></li>
+                <li class="flex justify-between"><span>Sábados:</span> <span>09:00 - 13:00</span></li>
+                <li class="flex justify-between"><span>Domingos:</span> <span>Cerrado</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f1f38] text-gray-300 py-12 border-t border-white/10">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div class="flex items-center gap-2">
+            <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/></svg>
+            <span class="font-headings font-bold text-xl text-white tracking-tight">Constructora</span>
+          </div>
+          
+          <div class="flex gap-6 text-sm">
+            <a href="/privacidad" class="hover:text-secondary transition-colors">Política de Privacidad</a>
+            <a href="/terminos" class="hover:text-secondary transition-colors">Términos y Condiciones</a>
+          </div>
+        </div>
+        
+        <div class="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-sm">© 2026 Empresa Constructora. Todos los derechos reservados.</p>
+          
+          <div class="flex items-center gap-4">
+            <span class="text-sm">Síguenos en nuestras redes:</span>
+            <div class="flex gap-3">
+              <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+              </a>
+              <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
