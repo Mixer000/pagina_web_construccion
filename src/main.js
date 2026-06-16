@@ -4,6 +4,11 @@ import trabajo2 from './assets/trabajo-2.jpg'
 import trabajo3 from './assets/trabajo-3.jpg'
 import trabajo4 from './assets/trabajo-4.jpg'
 import trabajo5 from './assets/trabajo-5.jpg'
+import trabajo6 from './assets/trabajo-6.jpg'
+import trabajo7 from './assets/trabajo-7.jpg'
+import trabajo8 from './assets/trabajo-8.jpg'
+import trabajo9 from './assets/trabajo-9.jpg'
+import trabajo10 from './assets/trabajo-10.jpg'
 
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile Menu Toggle
@@ -73,6 +78,41 @@ document.addEventListener('DOMContentLoaded', () => {
       category: "residencial",
       description: "Colocación de revestimiento exterior tipo Siding e instalación de ventanas termo-panel en terraza de madera.",
       image: trabajo5
+    },
+    {
+      id: 6,
+      title: "Remodelación de Baño con Espejo LED",
+      category: "residencial",
+      description: "Renovación completa de baño con cerámica clara de gran formato, mampara de ducha de vidrio y espejo con iluminación LED integrada.",
+      image: trabajo6
+    },
+    {
+      id: 7,
+      title: "Construcción de Galpón Industrial",
+      category: "industrial",
+      description: "Levantamiento de estructura metálica de gran envergadura y colocación de cubiertas y revestimientos de zinc acanalado.",
+      image: trabajo7
+    },
+    {
+      id: 8,
+      title: "Vivienda Unifamiliar Terminada",
+      category: "residencial",
+      description: "Casa residencial entregada con revestimiento exterior pintado en tonos crema, techumbre oscura y terminaciones finas.",
+      image: trabajo8
+    },
+    {
+      id: 9,
+      title: "Casa de Campo Frente al Bosque",
+      category: "residencial",
+      description: "Vivienda rústica-moderna en etapa avanzada con techumbre de teja asfáltica y vigas de madera a la vista en pórtico de entrada.",
+      image: trabajo9
+    },
+    {
+      id: 10,
+      title: "Montaje de Estructura de Techumbre",
+      category: "residencial",
+      description: "Construcción de cerchas y vigas de madera en segundo nivel sobre base de hormigón armado.",
+      image: trabajo10
     }
   ];
 
