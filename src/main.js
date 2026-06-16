@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slide.className = 'carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 z-0';
       slide.setAttribute('data-index', index);
       slide.innerHTML = `
-        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover select-none" />
+        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover select-none cursor-zoom-in" />
         <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
         <div class="absolute bottom-16 left-0 right-0 p-6 md:p-12 text-white">
           <div class="max-w-3xl transform translate-y-4 transition-all duration-500 carousel-text-container">
@@ -172,6 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       `;
+      
+      // Vincular clic de imagen a Lightbox
+      slide.querySelector('img').addEventListener('click', () => {
+        openLightbox(index);
+      });
+      
       slidesContainer.appendChild(slide);
 
       // Crear Dots
@@ -289,6 +295,117 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Iniciar carrusel al cargar la página
   renderCarousel();
+
+  // --- LIGHTBOX GALLERY ---
+  const lightboxModal = document.getElementById('lightbox-modal');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxDesc = document.getElementById('lightbox-desc');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxPrev = document.getElementById('lightbox-prev');
+  const lightboxNext = document.getElementById('lightbox-next');
+  let lightboxIndex = 0;
+
+  const openLightbox = (index) => {
+    lightboxIndex = index;
+    updateLightbox();
+    lightboxModal.classList.remove('opacity-0', 'pointer-events-none');
+    lightboxModal.classList.add('opacity-100');
+    stopAutoplay();
+  };
+
+  const closeLightbox = () => {
+    lightboxModal.classList.add('opacity-0', 'pointer-events-none');
+    lightboxModal.classList.remove('opacity-100');
+    startAutoplay();
+  };
+
+  const updateLightbox = () => {
+    if (filteredProjects.length === 0) return;
+    const project = filteredProjects[lightboxIndex];
+    lightboxImage.src = project.image;
+    lightboxTitle.textContent = project.title;
+    lightboxDesc.textContent = project.description;
+  };
+
+  const nextLightbox = () => {
+    lightboxIndex = (lightboxIndex + 1) % filteredProjects.length;
+    updateLightbox();
+  };
+
+  const prevLightbox = () => {
+    lightboxIndex = (lightboxIndex - 1 + filteredProjects.length) % filteredProjects.length;
+    updateLightbox();
+  };
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxNext.addEventListener('click', nextLightbox);
+  lightboxPrev.addEventListener('click', prevLightbox);
+
+  // Cerrar lightbox haciendo clic fuera de la imagen
+  lightboxModal.addEventListener('click', (e) => {
+    if (e.target === lightboxModal) {
+      closeLightbox();
+    }
+  });
+
+  // Navegación por teclado del Lightbox
+  document.addEventListener('keydown', (e) => {
+    if (lightboxModal.classList.contains('opacity-100')) {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextLightbox();
+      if (e.key === 'ArrowLeft') prevLightbox();
+    }
+  });
+
+  // --- FAQ ACCORDION ---
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-trigger');
+    trigger.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Cerrar los otros acordeones abiertos
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+      });
+
+      // Alternar estado del actual
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+
+  // --- SCROLL PROGRESS & BACK TO TOP ---
+  const scrollProgress = document.getElementById('scroll-progress');
+  const backToTopBtn = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    // Barra de Progreso de Lectura
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalHeight > 0) {
+      const progress = (window.scrollY / totalHeight) * 100;
+      scrollProgress.style.width = `${progress}%`;
+    }
+
+    // Visibilidad del Botón "Volver Arriba"
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.remove('opacity-0', 'translate-y-6', 'pointer-events-none');
+      backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+    } else {
+      backToTopBtn.classList.add('opacity-0', 'translate-y-6', 'pointer-events-none');
+      backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+    }
+  });
+
+  // Evento clic para Volver Arriba
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 
   // Form Validation
   const contactForm = document.getElementById('contact-form');

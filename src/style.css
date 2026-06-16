@@ -62,3 +62,54 @@ html {
   transform: translateY(16px);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
 }
+
+/* Scroll Progress Bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: var(--color-secondary);
+  z-index: 100;
+  width: 0%;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 2px 10px rgba(249, 115, 22, 0.4);
+}
+
+/* FAQ Accordion Transitions */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 250px; /* Altura máxima del contenido */
+  opacity: 1;
+  padding-top: 1rem;
+  padding-bottom: 1.25rem;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Timeline Process Details */
+.timeline-dot {
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15);
+}
+
+.timeline-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(249, 115, 22, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
