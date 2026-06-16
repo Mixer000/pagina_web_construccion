@@ -211,90 +211,58 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="proyectos" class="py-24 bg-white">
-      <div class="container mx-auto px-4 md:px-6">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+    <section id="proyectos" class="py-24 bg-white relative overflow-hidden">
+      <!-- Background subtle glow -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 gap-6">
           <div>
             <h2 class="text-3xl md:text-4xl font-bold text-primary font-headings mb-4">Proyectos Destacados</h2>
-            <p class="text-gray-600 text-lg max-w-2xl">Un vistazo a nuestras obras más representativas que demuestran nuestra capacidad técnica y atención al detalle.</p>
+            <p class="text-slate-500 text-base max-w-2xl leading-relaxed">Una muestra interactiva de nuestras obras. Filtra según tus intereses y desliza para ver los detalles.</p>
           </div>
-          <!-- Filters -->
-          <div class="flex flex-wrap gap-2.5">
-            <button class="filter-btn active px-6 py-2.5 rounded-full bg-primary text-white font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="all">Todos</button>
-            <button class="filter-btn px-6 py-2.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="residencial">Residencial</button>
-            <button class="filter-btn px-6 py-2.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="comercial">Comercial</button>
-            <button class="filter-btn px-6 py-2.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="industrial">Industrial</button>
-          </div>
-        </div>
-        
-        <!-- Masonry Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
-          <!-- Item 1 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="residencial">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" alt="Proyecto Residencial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
-              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Residencial</span>
-                <h3 class="text-white text-xl font-bold font-headings">Condominio Las Brisas</h3>
-              </div>
-            </div>
-          </div>
-          <!-- Item 2 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="comercial">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Proyecto Comercial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
-              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Comercial</span>
-                <h3 class="text-white text-xl font-bold font-headings">Centro Empresarial Nova</h3>
-              </div>
-            </div>
-          </div>
-          <!-- Item 3 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="industrial">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Proyecto Industrial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
-              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Industrial</span>
-                <h3 class="text-white text-xl font-bold font-headings">Planta Logística Sur</h3>
-              </div>
-            </div>
-          </div>
-          <!-- Item 4 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="residencial">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" alt="Proyecto Residencial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
-              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Residencial</span>
-                <h3 class="text-white text-xl font-bold font-headings">Edificio Vista Mar</h3>
-              </div>
-            </div>
-          </div>
-          <!-- Item 5 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="comercial">
-            <img src="https://images.unsplash.com/photo-1556804367-18451d453676?auto=format&fit=crop&q=80&w=800" alt="Proyecto Comercial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
-              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Comercial</span>
-                <h3 class="text-white text-xl font-bold font-headings">Plaza Centro Mall</h3>
-              </div>
-            </div>
-          </div>
-          <!-- Item 6 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="industrial">
-            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=800" alt="Proyecto Industrial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
-              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Industrial</span>
-                <h3 class="text-white text-xl font-bold font-headings">Galpón Manufactura Alfa</h3>
-              </div>
-            </div>
+          
+          <!-- Category Filters -->
+          <div class="flex flex-wrap gap-2" id="carousel-filters">
+            <button class="carousel-filter-btn active px-6 py-2.5 rounded-full bg-primary text-white font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="all">Todos</button>
+            <button class="carousel-filter-btn px-6 py-2.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="residencial">Residencial</button>
+            <button class="carousel-filter-btn px-6 py-2.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="comercial">Comercial</button>
+            <button class="carousel-filter-btn px-6 py-2.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="industrial">Industrial</button>
           </div>
         </div>
-        
-        <div class="text-center mt-14">
-          <button class="bg-transparent border border-primary hover:bg-primary hover:text-white text-primary font-semibold py-3 px-8 rounded-full transition-all duration-300 cursor-pointer text-sm">
-            Cargar Más Proyectos
-          </button>
+
+        <!-- Carousel Container -->
+        <div class="relative group max-w-5xl mx-auto">
+          <!-- Main Carousel Window -->
+          <div class="relative overflow-hidden rounded-3xl bg-slate-900 shadow-2xl aspect-[16/10] sm:aspect-[16/9] md:h-[500px]">
+            
+            <!-- Slides wrapper -->
+            <div id="carousel-slides" class="relative w-full h-full">
+              <!-- Slides will be loaded dynamically by JavaScript -->
+            </div>
+
+            <!-- Empty State Message -->
+            <div id="carousel-empty" class="hidden absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-slate-950 text-white">
+              <svg class="w-16 h-16 text-slate-600 mb-4 animate-pulse" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375 0 11-.75 0 .375 0 01.75 0z" />
+              </svg>
+              <h3 class="text-xl font-bold font-headings mb-1">Sin Proyectos Disponibles</h3>
+              <p class="text-slate-400 text-sm max-w-xs">Actualmente no hay imágenes en esta categoría. ¡Pronto subiremos nuevos trabajos!</p>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button id="carousel-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 text-white border border-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer shadow-md hover:scale-105" aria-label="Anterior">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button id="carousel-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-black/40 hover:bg-black/60 text-white border border-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer shadow-md hover:scale-105" aria-label="Siguiente">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Bottom Progress Indicators (Dots) -->
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5" id="carousel-dots">
+              <!-- Dots generated dynamically -->
+            </div>
+          </div>
         </div>
       </div>
     </section>
