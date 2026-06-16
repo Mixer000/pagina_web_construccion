@@ -358,24 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- FAQ ACCORDION ---
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const trigger = item.querySelector('.faq-trigger');
-    trigger.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      
-      // Cerrar los otros acordeones abiertos
-      faqItems.forEach(otherItem => {
-        otherItem.classList.remove('active');
-      });
 
-      // Alternar estado del actual
-      if (!isActive) {
-        item.classList.add('active');
-      }
-    });
-  });
 
   // --- SCROLL PROGRESS & BACK TO TOP ---
   const scrollProgress = document.getElementById('scroll-progress');
