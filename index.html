@@ -9,70 +9,83 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body class="antialiased overflow-x-hidden text-text bg-background">
     
-    <!-- Sticky Navigation Bar -->
-    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 py-4 glass-panel">
+    <!-- Sticky Floating Navigation Bar -->
+    <header id="main-header" class="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-7xl z-50 transition-all duration-300 py-4 rounded-2xl glass-panel border border-white/30 shadow-lg">
       <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <!-- Logo Placeholder -->
-        <a href="#inicio" class="flex items-center gap-2">
-          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/></svg>
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 bg-primary text-white rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/></svg>
+          </div>
           <span class="font-headings font-bold text-xl text-primary tracking-tight">Constructora</span>
         </a>
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-8">
-          <a href="#inicio" id="nav-home" class="text-sm font-semibold text-text hover:text-secondary transition-colors">Inicio</a>
-          <a href="#nosotros" id="nav-about" class="text-sm font-semibold text-text hover:text-secondary transition-colors">Nosotros</a>
-          <a href="#servicios" id="nav-services" class="text-sm font-semibold text-text hover:text-secondary transition-colors">Servicios</a>
-          <a href="#proyectos" id="nav-projects" class="text-sm font-semibold text-text hover:text-secondary transition-colors">Proyectos</a>
-          <a href="#contacto" id="nav-contact" class="text-sm font-semibold text-text hover:text-secondary transition-colors">Contacto</a>
-          <button onclick="document.getElementById('contacto').scrollIntoView()" class="bg-primary hover:bg-blue-900 text-white font-semibold py-2 px-6 rounded-full transition-colors shadow-md">
+          <a href="#inicio" id="nav-home" class="text-sm font-semibold text-text hover:text-secondary transition-colors duration-200">Inicio</a>
+          <a href="#nosotros" id="nav-about" class="text-sm font-semibold text-text hover:text-secondary transition-colors duration-200">Nosotros</a>
+          <a href="#servicios" id="nav-services" class="text-sm font-semibold text-text hover:text-secondary transition-colors duration-200">Servicios</a>
+          <a href="#proyectos" id="nav-projects" class="text-sm font-semibold text-text hover:text-secondary transition-colors duration-200">Proyectos</a>
+          <a href="#contacto" id="nav-contact" class="text-sm font-semibold text-text hover:text-secondary transition-colors duration-200">Contacto</a>
+          <button onclick="document.getElementById('contacto').scrollIntoView()" class="bg-primary hover:bg-secondary text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 cursor-pointer text-sm">
             Cotiza tu Proyecto
           </button>
         </nav>
 
         <!-- Mobile Menu Toggle -->
-        <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
+        <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none p-1">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
       </div>
 
       <!-- Mobile Navigation Menu -->
-      <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 flex-col py-4 px-6 gap-4">
-        <a href="#inicio" class="mobile-link text-text font-semibold hover:text-secondary">Inicio</a>
-        <a href="#nosotros" class="mobile-link text-text font-semibold hover:text-secondary">Nosotros</a>
-        <a href="#servicios" class="mobile-link text-text font-semibold hover:text-secondary">Servicios</a>
-        <a href="#proyectos" class="mobile-link text-text font-semibold hover:text-secondary">Proyectos</a>
-        <a href="#contacto" class="mobile-link text-text font-semibold hover:text-secondary">Contacto</a>
+      <div id="mobile-menu" class="hidden absolute top-[calc(100%+12px)] left-0 w-full bg-white/95 backdrop-blur-md shadow-xl rounded-2xl border border-slate-200/50 flex-col py-5 px-6 gap-4">
+        <a href="#inicio" class="mobile-link text-text font-semibold hover:text-secondary transition-colors py-1">Inicio</a>
+        <a href="#nosotros" class="mobile-link text-text font-semibold hover:text-secondary transition-colors py-1">Nosotros</a>
+        <a href="#servicios" class="mobile-link text-text font-semibold hover:text-secondary transition-colors py-1">Servicios</a>
+        <a href="#proyectos" class="mobile-link text-text font-semibold hover:text-secondary transition-colors py-1">Proyectos</a>
+        <a href="#contacto" class="mobile-link text-text font-semibold hover:text-secondary transition-colors py-1">Contacto</a>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20">
+    <section id="inicio" class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-primary">
       <!-- Background Image with Overlay -->
       <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&q=80&w=2000" alt="Construcción" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-primary/70 mix-blend-multiply"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/90"></div>
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000" alt="Arquitectura Moderna" class="w-full h-full object-cover object-center scale-105 animate-[zoomOut_1.5s_ease-out]" />
+        <!-- Sleek dark slate gradient overlays -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40 md:to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
       </div>
       
-      <div class="relative z-10 container mx-auto px-4 md:px-6 text-center text-white">
-        <h1 class="text-4xl md:text-6xl font-bold font-headings mb-6 leading-tight drop-shadow-lg">
-          Construyendo el Futuro con <br class="hidden md:block"/> Excelencia y Solidez
-        </h1>
-        <p class="text-lg md:text-xl font-body max-w-3xl mx-auto mb-10 text-gray-200">
-          Más de 20 años de experiencia transformando visiones en realidades estructurales. Calidad garantizada en proyectos residenciales, comerciales e industriales.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <button onclick="document.getElementById('proyectos').scrollIntoView()" class="w-full sm:w-auto bg-secondary hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full transition-all hover-lift shadow-lg text-center cursor-pointer">
-            Ver Nuestros Proyectos
-          </button>
-          <button onclick="document.getElementById('contacto').scrollIntoView()" class="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-semibold py-3 px-8 rounded-full transition-all text-center cursor-pointer">
-            Hablemos de tu Obra
-          </button>
+      <div class="relative z-10 container mx-auto px-4 md:px-6">
+        <div class="max-w-3xl text-left text-white">
+          <!-- Glass Badge -->
+          <span class="inline-flex items-center gap-1.5 py-1.5 px-3.5 rounded-full text-xs font-semibold bg-secondary/20 text-secondary border border-secondary/35 mb-6 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+            Líderes en Construcción Civil
+          </span>
+          
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold font-headings mb-6 leading-tight tracking-tight drop-shadow-md">
+            Construyendo el futuro con <span class="text-secondary bg-clip-text">excelencia</span>
+          </h1>
+          
+          <p class="text-lg md:text-xl font-body max-w-2xl mb-10 text-slate-300 leading-relaxed">
+            Más de 20 años transformando visiones en realidades estructurales. Calidad garantizada en proyectos comerciales, industriales y residenciales de alta gama.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button onclick="document.getElementById('proyectos').scrollIntoView()" class="w-full sm:w-auto bg-secondary hover:bg-secondary/95 text-white font-semibold py-3.5 px-8 rounded-full transition-all duration-300 hover:shadow-[0_8px_30px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 text-center cursor-pointer">
+              Ver Proyectos Destacados
+            </button>
+            <button onclick="document.getElementById('contacto').scrollIntoView()" class="w-full sm:w-auto bg-white/10 border border-white/20 hover:bg-white hover:text-primary text-white font-semibold py-3.5 px-8 rounded-full transition-all duration-300 text-center cursor-pointer backdrop-blur-sm">
+              Hablemos de tu Obra
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -143,39 +156,55 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Service Card 1 -->
-          <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift border border-gray-100 transition-all">
-            <div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-secondary mb-6">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+          <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-secondary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+            <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-all duration-300 mb-6">
+              <svg class="w-6 h-6 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-3">Edificación Residencial</h3>
-            <p class="text-gray-600">Diseño y construcción de casas y edificios habitacionales a la medida.</p>
+            <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors duration-200">Edificación Residencial</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Diseño y construcción de casas y edificios habitacionales a la medida con estándares ecológicos.</p>
           </div>
           
           <!-- Service Card 2 -->
-          <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift border border-gray-100 transition-all">
-            <div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-secondary mb-6">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+          <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-secondary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+            <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-all duration-300 mb-6">
+              <svg class="w-6 h-6 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="2" ry="2"/>
+                <path d="M12 18h.01M8 18h.01M16 18h.01M12 14h.01M8 14h.01M16 14h.01M12 10h.01M8 10h.01M16 10h.01M12 6h.01M8 6h.01M16 6h.01"/>
+              </svg>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-3">Obras Comerciales</h3>
-            <p class="text-gray-600">Desarrollo de locales, oficinas y centros comerciales modernos y funcionales.</p>
+            <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors duration-200">Obras Comerciales</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Desarrollo de locales, oficinas y centros comerciales modernos, funcionales y de alta rentabilidad.</p>
           </div>
           
           <!-- Service Card 3 -->
-          <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift border border-gray-100 transition-all">
-            <div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-secondary mb-6">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-secondary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+            <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-all duration-300 mb-6">
+              <svg class="w-6 h-6 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M2 20V9l4 3V9l4 3V9l4 3v8H2z"/>
+                <path d="M18 20V5l4 2v13h-4z"/>
+                <path d="M12 20v-4H8v4h4z"/>
+              </svg>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-3">Proyectos Industriales</h3>
-            <p class="text-gray-600">Naves industriales y galpones diseñados para optimizar la logística y producción.</p>
+            <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors duration-200">Proyectos Industriales</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Naves industriales, plantas de producción y galpones optimizados para flujos logísticos complejos.</p>
           </div>
           
           <!-- Service Card 4 -->
-          <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover-lift border border-gray-100 transition-all">
-            <div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-secondary mb-6">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-secondary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+            <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-all duration-300 mb-6">
+              <svg class="w-6 h-6 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-3">Gestión de Proyectos</h3>
-            <p class="text-gray-600">Asesoría integral, tramitación de permisos y supervisión técnica de obras.</p>
+            <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors duration-200">Gestión de Proyectos</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Asesoría técnica integral, tramitación legal de permisos y supervisión rigurosa de control de obra.</p>
           </div>
         </div>
       </div>
@@ -190,68 +219,80 @@
             <p class="text-gray-600 text-lg max-w-2xl">Un vistazo a nuestras obras más representativas que demuestran nuestra capacidad técnica y atención al detalle.</p>
           </div>
           <!-- Filters -->
-          <div class="flex flex-wrap gap-2">
-            <button class="filter-btn active px-6 py-2 rounded-full bg-primary text-white font-semibold text-sm transition-colors" data-filter="all">Todos</button>
-            <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-text hover:bg-gray-200 font-semibold text-sm transition-colors" data-filter="residencial">Residencial</button>
-            <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-text hover:bg-gray-200 font-semibold text-sm transition-colors" data-filter="comercial">Comercial</button>
-            <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-text hover:bg-gray-200 font-semibold text-sm transition-colors" data-filter="industrial">Industrial</button>
+          <div class="flex flex-wrap gap-2.5">
+            <button class="filter-btn active px-6 py-2.5 rounded-full bg-primary text-white font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="all">Todos</button>
+            <button class="filter-btn px-6 py-2.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="residencial">Residencial</button>
+            <button class="filter-btn px-6 py-2.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="comercial">Comercial</button>
+            <button class="filter-btn px-6 py-2.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm" data-filter="industrial">Industrial</button>
           </div>
         </div>
         
-        <!-- Masonry Grid Placeholder -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+        <!-- Masonry Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
           <!-- Item 1 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="residencial">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" alt="Proyecto Residencial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Residencial</span>
-              <h3 class="text-white text-xl font-bold">Condominio Las Brisas</h3>
+          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="residencial">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" alt="Proyecto Residencial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
+              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Residencial</span>
+                <h3 class="text-white text-xl font-bold font-headings">Condominio Las Brisas</h3>
+              </div>
             </div>
           </div>
           <!-- Item 2 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="comercial">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Proyecto Comercial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Comercial</span>
-              <h3 class="text-white text-xl font-bold">Centro Empresarial Nova</h3>
+          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="comercial">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Proyecto Comercial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
+              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Comercial</span>
+                <h3 class="text-white text-xl font-bold font-headings">Centro Empresarial Nova</h3>
+              </div>
             </div>
           </div>
           <!-- Item 3 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="industrial">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Proyecto Industrial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Industrial</span>
-              <h3 class="text-white text-xl font-bold">Planta Logística Sur</h3>
+          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="industrial">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Proyecto Industrial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
+              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Industrial</span>
+                <h3 class="text-white text-xl font-bold font-headings">Planta Logística Sur</h3>
+              </div>
             </div>
           </div>
           <!-- Item 4 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="residencial">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" alt="Proyecto Residencial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Residencial</span>
-              <h3 class="text-white text-xl font-bold">Edificio Vista Mar</h3>
+          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="residencial">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" alt="Proyecto Residencial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
+              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Residencial</span>
+                <h3 class="text-white text-xl font-bold font-headings">Edificio Vista Mar</h3>
+              </div>
             </div>
           </div>
           <!-- Item 5 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="comercial">
-            <img src="https://images.unsplash.com/photo-1556804367-18451d453676?auto=format&fit=crop&q=80&w=800" alt="Proyecto Comercial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Comercial</span>
-              <h3 class="text-white text-xl font-bold">Plaza Centro Mall</h3>
+          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="comercial">
+            <img src="https://images.unsplash.com/photo-1556804367-18451d453676?auto=format&fit=crop&q=80&w=800" alt="Proyecto Comercial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
+              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Comercial</span>
+                <h3 class="text-white text-xl font-bold font-headings">Plaza Centro Mall</h3>
+              </div>
             </div>
           </div>
           <!-- Item 6 -->
-          <div class="portfolio-item group relative overflow-hidden rounded-2xl" data-category="industrial">
-            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=800" alt="Proyecto Industrial" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-              <span class="text-secondary font-semibold text-sm mb-1 uppercase tracking-wider">Industrial</span>
-              <h3 class="text-white text-xl font-bold">Galpón Manufactura Alfa</h3>
+          <div class="portfolio-item group relative overflow-hidden rounded-3xl shadow-md cursor-pointer" data-category="industrial">
+            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=800" alt="Proyecto Industrial" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 backdrop-blur-[2px]">
+              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="text-secondary font-semibold text-xs mb-1.5 uppercase tracking-wider block">Industrial</span>
+                <h3 class="text-white text-xl font-bold font-headings">Galpón Manufactura Alfa</h3>
+              </div>
             </div>
           </div>
         </div>
         
-        <div class="text-center mt-12">
-          <button class="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-colors cursor-pointer">
+        <div class="text-center mt-14">
+          <button class="bg-transparent border border-primary hover:bg-primary hover:text-white text-primary font-semibold py-3 px-8 rounded-full transition-all duration-300 cursor-pointer text-sm">
             Cargar Más Proyectos
           </button>
         </div>
